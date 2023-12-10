@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginForm from "./form/form";
+import {Link} from "react-router-dom"
+import Employee from './employee/Employee'
+import "./App.css";
 
-function App() {
+function LoginPage () {
+  const handleLogin = (credentials) => {
+    // Replace this with actual authentication logic (e.g., API call)
+    console.log("Logging in with:", credentials);
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <LoginForm handleLogin={handleLogin} />
+    </>
   );
-}
+};
 
-export default App;
+export default LoginPage;
