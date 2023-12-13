@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import LoginPage from './App';
+import Employee from './employee/Employee';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route,} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <BrowserRouter basename="/app">
+     <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/Employee" element={<Employee/>} />
+        <Route path="/Employee" element={<Employee />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

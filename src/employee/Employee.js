@@ -1,5 +1,10 @@
-function Employee({credentials}) {
-    return <h1>Employee name is {credentials.username}</h1>
+import './Employee.css'
+function Employee() {
+  return (
+    <body className="emp">
+      <h1>Employee name is </h1>
+    </body>
+  );
 }
 
-export default Employee
+export default Employee;
