@@ -6,13 +6,12 @@ const LoginForm = ({ handleLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    handleLogin({ username, password });
+    await handleLogin({ username, password });
   };
 
   return (
-    <div className='form'>
     <form onSubmit={handleSubmit}>
         <div id="header">
             <div id="logo">
@@ -35,7 +34,6 @@ const LoginForm = ({ handleLogin }) => {
       </div>
       <button type="submit">Login</button>
     </form>
-    </div>
   );
 };
 
