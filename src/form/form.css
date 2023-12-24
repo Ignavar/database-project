@@ -3,7 +3,7 @@ form
 {
     text-align: center;
     width: 350px;
-    padding: 8%;
+    padding: 30%;
     border-radius: 2%;
     display: grid;
 }
@@ -25,6 +25,7 @@ form .Input-fields input
     padding:20px 0px;
     text-indent: 30px;
     width: 100%;
+    height: 40px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     outline:none;

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import LoginPage from './App';
 import Employee from './employee/Employee';
+import Department from './department/Department';
+import Owner from './owner/Owner';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route,} from "react-router-dom";
 
@@ -12,7 +14,9 @@ root.render(
      <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/Employee" element={<Employee />} />
+        <Route path="/Employee/*" element={<Employee />} />
+        <Route path="/Department/*" element={<Department/>}/>
+        <Route path="/Owner/*" element ={<Owner />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

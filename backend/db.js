@@ -11,4 +11,15 @@ const connect_to_db = () => {
     return con;
 }
 
-module.exports = connect_to_db;
+const connect_to_db2 = () => {
+    let con = mysql.createConnection({
+        multipleStatements:true,
+        host: "localhost",
+        user: "Employee",
+        password: "Haroon-2003",
+        database: "meat_masters"
+    });
+    return con;
+}
+
+module.exports = {connect_to_db,connect_to_db2}

@@ -34,6 +34,8 @@ function LoginPage() {
 
         // Call the handleLogin function or update the UI as needed
         if (accountType === "employee") navigate("/Employee");
+        if (accountType ==="Department Head") navigate("/Department")
+        if (accountType==="owner") navigate("/Owner");
       })
       .catch((error) => {
         console.log(error);

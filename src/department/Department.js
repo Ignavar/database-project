@@ -6,9 +6,9 @@ import Contract from "./Contract";
 import Fines from './Fine'
 import Bonus from './Bonus'
 import Leaves from "./Leaves";
-import "./Employee.css";
 
-function Employee() {
+
+function Department() {
   const navigate = useNavigate();
   const [date, setDate] = useState(new Date());
   const [employeeName, setEmployeeName] = useState("");
@@ -88,20 +88,20 @@ function Employee() {
     <div className="employee">
       <ul className=" links">
         <img className="image" src="../logo.png" alt="meatmasters"/>
-        <li onClick={()=>navigate('/Employee')} className="link">
-          <Link to='/Employee'>Salary</Link>
+        <li onClick={()=>navigate('/Department')} className="link">
+          <Link to='/Department'>Salary</Link>
         </li>
         <li onClick={()=>navigate('/Employee/contract')} className="link">
-          <Link to="/Employee/contract">Contracts</Link>
+          <Link to="/Department/contract">Contracts</Link>
         </li>
         <li onClick={()=>navigate('/Employee/fines')} className="link">
-          <Link to='/Employee/fines'>Fines</Link>
+          <Link to='/Department/fines'>Fines</Link>
         </li>
         <li onClick={()=>navigate('/Employee/bonus')} className="link">
-          <Link to='/Employee/bonus'>Bonuses</Link>
+          <Link to='/Department/bonus'>Bonuses</Link>
         </li>
         <li onClick={()=>navigate('/Employee/leaves')} className="link">
-          <Link to='/Employee/leaves'>Leaves</Link>
+          <Link to='/Department/leaves'>Leaves</Link>
         </li>
       </ul>
       <section className="main">
@@ -138,4 +138,4 @@ function Employee() {
   );
 }
 
-export default Employee;
+export default Department;

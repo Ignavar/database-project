@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
-const connect_to_db = require("../db");
+const connect = require("../db");
 const jwt = require("jsonwebtoken");
-const getId = require("../middleware/getId");
 
-let db = connect_to_db();
+
+let db = connect.connect_to_db();
 
 const JWt = "Sougma Balls Bitch";
 
