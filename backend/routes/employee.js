@@ -12,7 +12,6 @@ var transporter = nodemailer.createTransport({
 });
 
 const getId = require("../middleware/getId");
-const { text } = require("body-parser");
 
 let db = connect.connect_to_db2();
 
@@ -34,7 +33,6 @@ router.post("/", getId, async (req, res) => {
     );
   });
 });
-module.exports = router;
 
 router.post("/photo", getId, async (req, res) => {
   const empID = req.user;

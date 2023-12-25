@@ -22,4 +22,15 @@ const connect_to_db2 = () => {
     return con;
 }
 
-module.exports = {connect_to_db,connect_to_db2}
+const connect_to_db3 = () => {
+    let con = mysql.createConnection({
+        multipleStatements:true,
+        host: "localhost",
+        user: "Department",
+        password: "Haroon-2003",
+        database: "meat_masters"
+    });
+    return con;
+}
+
+module.exports = {connect_to_db,connect_to_db2,connect_to_db3}

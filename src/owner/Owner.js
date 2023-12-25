@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import {Routes,Route,Link, useNavigate} from "react-router-dom"
-import MonthlySalary from "./MonthlySalary";
+import Transactions from "./Transactions";
 import Contract from "./Contract";
 import Fines from './Fine'
 import Bonus from './Bonus'
 import Leaves from "./Leaves";
-
+import Profits from "./Profits";
 
 function Owner() {
   const navigate = useNavigate();
@@ -89,19 +89,22 @@ function Owner() {
       <ul className=" links">
         <img className="image" src="../logo.png" alt="meatmasters"/>
         <li onClick={()=>navigate('/Owner')} className="link">
-          <Link to='/Owner'>Salary</Link>
+          <Link to='/Owner'>Transactions</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/contract')} className="link">
-          <Link to="/Owner/contract">Contracts</Link>
+        <li onClick={()=>navigate('/Owner/Contract')} className="link">
+          <Link to="/Owner/Contract">Contracts</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/fines')} className="link">
-          <Link to='/Owner/fines'>Fines</Link>
+        <li onClick={()=>navigate('/Owner/Fines')} className="link">
+          <Link to="/Owner/Fines">Fines</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/bonus')} className="link">
-          <Link to='/Owner/bonus'>Bonuses</Link>
+        <li onClick={()=>navigate('/Owner/Leaves')} className="link">
+          <Link to='/Owner/Leaves'>Leaves</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/leaves')} className="link">
-          <Link to='/Owner/leaves'>Leaves</Link>
+        <li onClick={()=>navigate('/Owner/bonus')} className="link">
+          <Link to='/Owner/Bonus'>Bonuses</Link>
+        </li>
+        <li onClick={()=>navigate('/Owner/Profits')} className="link">
+          <Link to='/Owner/Profits'>Profits</Link>
         </li>
       </ul>
       <section className="main">
@@ -121,11 +124,13 @@ function Owner() {
             </div>
           </div>
           <Routes>
-            <Route path="/" element={<MonthlySalary/>}></Route>
-            <Route path="/contract" element={<Contract />}></Route>
-            <Route path="/fines" element={<Fines/>}></Route>
-            <Route path="/bonus" element={<Bonus/>}></Route>
-            <Route path="/leaves" element={<Leaves />}></Route>
+            <Route path="/" element={<Transactions/>}></Route>
+            <Route path="/Contract" element={<Contract />}></Route>
+            <Route path="/Fines" element={<Fines/>}></Route>
+            <Route path="/Bonus" element={<Bonus/>}></Route>
+            <Route path="/Leaves" element={<Leaves />}></Route>
+            <Route path="/Transactions" element={<Leaves />}></Route>
+            <Route path="/Profits" element={<Profits />}></Route>
           </Routes>
         </div>
         <div className="sidebar">

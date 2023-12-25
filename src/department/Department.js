@@ -6,7 +6,8 @@ import Contract from "./Contract";
 import Fines from './Fine'
 import Bonus from './Bonus'
 import Leaves from "./Leaves";
-
+import Vendors from "./Vendors";
+import Transactions from "./Transactions";
 
 function Department() {
   const navigate = useNavigate();
@@ -91,17 +92,26 @@ function Department() {
         <li onClick={()=>navigate('/Department')} className="link">
           <Link to='/Department'>Salary</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/contract')} className="link">
+        <li onClick={()=>navigate('/Department/contract')} className="link">
           <Link to="/Department/contract">Contracts</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/fines')} className="link">
+        <li onClick={()=>navigate('/Department/fines')} className="link">
           <Link to='/Department/fines'>Fines</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/bonus')} className="link">
+        <li onClick={()=>navigate('/Department/bonus')} className="link">
           <Link to='/Department/bonus'>Bonuses</Link>
         </li>
-        <li onClick={()=>navigate('/Employee/leaves')} className="link">
+        <li onClick={()=>navigate('/Department/leaves')} className="link">
           <Link to='/Department/leaves'>Leaves</Link>
+        </li>
+        <li onClick={()=>navigate('/Department/vendors')} className="link">
+          <Link to='/Department/vendors'>Vendors</Link>
+        </li>
+        <li onClick={()=>navigate('/Department/Transactions')} className="link">
+          <Link to='/Department/Transactions'>Transactions</Link>
+        </li>
+        <li onClick={()=>navigate('/Department')} className="link">
+          <Link to='/Department'>Employee</Link>
         </li>
       </ul>
       <section className="main">
@@ -126,6 +136,8 @@ function Department() {
             <Route path="/fines" element={<Fines/>}></Route>
             <Route path="/bonus" element={<Bonus/>}></Route>
             <Route path="/leaves" element={<Leaves />}></Route>
+            <Route path="/vendors" element={<Vendors/>}></Route>
+            <Route path="/Transactions" element={<Transactions/>}></Route>
           </Routes>
         </div>
         <div className="sidebar">

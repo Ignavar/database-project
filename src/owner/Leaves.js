@@ -100,10 +100,10 @@ function Leaves() {
   return (
     <div className="employee-table">
       <ul>
-        <li className="employee-table__row fine">
-          <h2>Leaves Left: {leavesLeft}</h2>
-          <h2>Sick Leaves Left: {sickLeavesLeft}</h2>
-        </li>
+        {(leavesLeft||sickLeavesLeft)&&<li className="employee-table__row fine">
+          {leavesLeft&&<h2>Leaves Left: {leavesLeft}</h2>}
+          {sickLeavesLeft&&<h2>Sick Leaves Left: {sickLeavesLeft}</h2>}
+        </li>}
         <li className="employee-table__row data">
           <h2>Request Leave:</h2>
           <p>Starting Date:</p>
@@ -126,16 +126,15 @@ function Leaves() {
           ></input>
           <button onClick={sendMail}>Submit</button>
         </li>
-        <h1>Leaves: </h1>
-        (leavesArray.exists) && (
-        {leavesArray.map((leave, index) => (
+        {(leavesArray===undefined)&&<h1>Leaves: </h1>}
+         {(leavesArray===undefined) && leavesArray.map((leave, index) => (
           <li key={index} className="employee-table__row fine">
             <h2>Leave Id: {leave.leaveId}</h2>
             <p>Starting Date: {leave.startingDate}</p>
             <p>Duration: {leave.leaveDuration}</p>
             <p>Type: {leave.leaveType}</p>
           </li>
-        ))})
+        ))}
       </ul>
     </div>
   );
